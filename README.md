@@ -5,7 +5,6 @@ Web development for store
 Weite Geng
 
 # Project Member
-<br>
 Huang Zhou
 <br>
 Meng Li
@@ -15,7 +14,6 @@ Haopeng Zhang
 Na Wang
 
 # Progress 5%
-<br>
 [Planning Stage]
 <br>
 ERD Diagram (Weite Geng, Huang Zhou)
@@ -32,5 +30,4 @@ Project Initial Setup (TBD)
 
 <br>
 [Developing Stage]
-<br>
 to be continued....
