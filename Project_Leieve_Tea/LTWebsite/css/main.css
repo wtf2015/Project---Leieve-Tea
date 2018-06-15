@@ -1,0 +1,59 @@
+body{
+    color: #333; 
+    line-height: 1.5;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0 auto;
+}
+/*.navbar-collapse collapse{
+    position:fixed;
+}*/
+
+.navbar-header h1{
+    font-variant: small-caps;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.light{
+    font-weight: normal;
+}
+
+/*
+******************************************************************
+                  Header
+******************************************************************
+*/
+
+.page-marque{
+    background-color:#333;
+    background-repeat: no-repeat;
+    background-position:center;
+    background-attachment:fixed;
+    height: 500px;
+    margin-bottom: 2%;
+    padding: 3em;
+    text-align:center;
+}
+
+.page-marque img{
+    user-select:none;
+    margin-top:3em;
+    margin-bottom:2em;
+}
+
+.banner-button{
+    font-family: 'montserrat';
+    font-variant: small-caps;
+    font-size: 0.8em;
+    letter-spacing: .25em;
+    color: #fff;
+    border: 1px #fff solid;
+    padding: 1rem 2rem;  
+    position: relative;    
+}
+
+.banner-button:hover{
+    color: #e35e5f;
+    border: 1px #e54243 solid;
+    text-decoration: none;
+}
