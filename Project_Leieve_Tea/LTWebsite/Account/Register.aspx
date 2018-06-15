@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="Register" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="LTWebsite.Account.Register" %>
 
-<asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
+<asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="ChildContent">
     <h2><%: Title %>.</h2>
     <p class="text-danger">
         <asp:Literal runat="server" ID="ErrorMessage" />
@@ -8,7 +8,7 @@
 
     <div class="form-horizontal">
         <h4>Create a new account</h4>
-        <hr />
+<%--        <hr />--%>
         <asp:ValidationSummary runat="server" CssClass="text-danger" />
         <div class="form-group">
             <asp:Label runat="server" AssociatedControlID="Email" CssClass="col-md-2 control-label">Email</asp:Label>

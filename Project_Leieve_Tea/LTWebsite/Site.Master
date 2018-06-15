@@ -78,8 +78,13 @@
         <div class="container-fluid body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
-            <hr />
             <div class="container body-content">
+                <asp:ContentPlaceHolder ID="ChildContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            
+            <hr />
+            <div class="container body-content">               
                 <footer>
                     <div class="panel">
                         <div class="contactus">

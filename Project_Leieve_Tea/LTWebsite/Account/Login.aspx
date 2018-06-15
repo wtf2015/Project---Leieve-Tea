@@ -2,7 +2,7 @@
 
 <%@ Register Src="~/Account/OpenAuthProviders.ascx" TagPrefix="uc" TagName="OpenAuthProviders" %>
 
-<asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
+<asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="ChildContent">
     <h2><%: Title %>.</h2>
 
     <div class="row">
@@ -10,7 +10,7 @@
             <section id="loginForm">
                 <div class="form-horizontal">
                     <h4>Use a local account to log in.</h4>
-                    <hr />
+<%--                    <hr />--%>
                     <asp:PlaceHolder runat="server" ID="ErrorMessage" Visible="false">
                         <p class="text-danger">
                             <asp:Literal runat="server" ID="FailureText" />
