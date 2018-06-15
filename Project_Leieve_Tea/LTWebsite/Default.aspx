@@ -7,7 +7,9 @@
         <div>
             <img src="img/LT_LOGO.png" alt="">
         </div>
-
+        <div>
+            <h1>LEIEVE TEA</h1>
+        </div>
         <div>
             <a class="banner-button" href="#">ORDER NOW</a>
         </div>

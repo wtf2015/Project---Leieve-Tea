@@ -76,10 +76,11 @@ body{
 */
 
 .page-marque{
-    background-color:#f8f8f8;
+    background-image: linear-gradient(rgba(0, 160, 155, 0.23), rgba(200, 30, 50, 0.23)), url(../img/LT_BG_03.png);
+    /*background-color:#f8f8f8;*/
     background-repeat: no-repeat;
     background-position:center;
-    background-attachment:fixed;
+    background-size:cover;
     height: 500px;
     margin-bottom: 2%;
     padding: 3em;
@@ -89,8 +90,13 @@ body{
 
 .page-marque img{
     user-select:none;
-    margin-top:3em;
-    margin-bottom:2em;
+    margin-top:1em;
+}
+.page-marque h1{
+    font-size:5vh;
+    color: #fff;
+    margin-bottom:1em;
+    text-shadow: 2px 2px 4px #000;
 }
 
 .banner-button{
@@ -98,14 +104,16 @@ body{
     font-variant: small-caps;
     font-size: 0.8em;
     letter-spacing: .25em;
-    color: #000;
-    border: 1px #000 solid;
+    color: #fff;
+    border: 1px #fff solid;
     padding: 1rem 2rem;  
     position: relative;    
 }
 
 .banner-button:hover{
-    color: #e35e5f;
+    /*color: #e35e5f;*/
+    color: #fff;
+    background-color: #e54243;
     border: 1px #e54243 solid;
     text-decoration: none;
 }

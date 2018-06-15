@@ -216,6 +216,8 @@
     <Content Include="hover.css" />
     <Content Include="img\LT_BG.jpg" />
     <Content Include="img\LT_BG_02.jpg" />
+    <Content Include="img\LT_BG_03.png" />
+    <Content Include="img\LT_BG_04.png" />
     <Content Include="img\LT_LOGO.png" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
