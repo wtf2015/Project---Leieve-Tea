@@ -422,6 +422,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="css\" />
+    <Folder Include="img\" />
     <Folder Include="Webpages\" />
   </ItemGroup>
   <PropertyGroup>
