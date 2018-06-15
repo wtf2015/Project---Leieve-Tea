@@ -107,7 +107,8 @@ body{
     color: #fff;
     border: 1px #fff solid;
     padding: 1rem 2rem;  
-    position: relative;    
+    position: relative;
+    text-decoration: none;    
 }
 
 .banner-button:hover{
@@ -116,6 +117,19 @@ body{
     background-color: #e54243;
     border: 1px #e54243 solid;
     text-decoration: none;
+}
+
+/*
+******************************************************************
+                  main
+******************************************************************
+*/
+
+main{
+    margin: 0 auto;
+    margin-top: 2em;
+    padding:0 0.625em;
+    height:1000px;
 }
 
 
@@ -147,3 +161,4 @@ footer h4{
 #copyright{
     font-size: 0.8em;
 }
+
