@@ -79,9 +79,44 @@
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />
-            <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
-            </footer>
+            <div class="container body-content">
+                <footer>
+                    <div class="panel">
+                        <div class="contactus">
+                            <h4>CONTACT LEIEVE</h4>
+                            <p>Leieve Tea</p>
+                            <p>1-15581 Marine Dr, White Rock, BC V4B 1C9</p>
+                            <p>Phone: 780xxxxxxx</p>
+                            <p>Email: example@leievetea.com</p>
+                        </div>
+                        <div class="contactus">
+                            <h4>CONTACT LEIEVE</h4>
+                            <p>Leieve Tea</p>
+                            <p>1-15581 Marine Dr, White Rock, BC V4B 1C9</p>
+                            <p>Phone: 780xxxxxxx</p>
+                            <p>Email: example@leievetea.com</p>
+                        </div>
+                        <div class="contactus">
+                            <h4>CONTACT LEIEVE</h4>
+                            <p>Leieve Tea</p>
+                            <p>1-15581 Marine Dr, White Rock, BC V4B 1C9</p>
+                            <p>Phone: 780xxxxxxx</p>
+                            <p>Email: example@leievetea.com</p>
+                        </div>
+                        <div class="contactus">
+                            <h4>CONTACT LEIEVE</h4>
+                            <p>Leieve Tea</p>
+                            <p>1-15581 Marine Dr, White Rock, BC V4B 1C9</p>
+                            <p>Phone: 780xxxxxxx</p>
+                            <p>Email: example@leievetea.com</p>
+                        </div>
+                    </div>
+                    
+
+                    <p id="copyright">Copyright &copy; <%: DateTime.Now.Year %> LEIEVE TEA Co., Ltd.</p>
+                </footer>
+            </div>
+            
         </div>
     </form>
 </body>
