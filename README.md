@@ -22,11 +22,11 @@ DFD Diagram (TBD)
 <br>
 Create Database (Na Wang)
 <br>
-Project UI Design (TBD)
+Project UI Design (Huang Zhou)
 <br>
 Project UX Design (TBD)
 <br>
-Project Initial Setup (TBD)
+Project Initial Setup (Huang Zhou)
 
 <br>
 [Developing Stage]
