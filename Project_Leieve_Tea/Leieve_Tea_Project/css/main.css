@@ -22,6 +22,44 @@ body{
    color: #000000;
  }
 
+.edit-navbar{
+    background-color: #fff;
+    height: 50px;
+    border-bottom: 0px;
+    transition: all 0.6s ease-out;
+}
+
+.edit-navbar .navbar-header .navbar-brand{
+    color: #333;
+    font-weight: bold;
+    user-select: none;
+}
+
+/*.navbar.affix {
+    position: fixed;
+    top:0;
+    width:100%;
+    background-color: rgba(0,0,0,0.78);
+}*/
+
+
+/*jquery darker when scrolling*/
+.edit-navbar.darker{
+    background-color: rgba(0,0,0,0.78);
+    height: 50px;
+    transition: all 0.6s ease-out;
+}
+
+.edit-navbar.darker .navbar-collapse.collapse .nav.navbar-nav li a{
+    color: #fff;
+}
+
+.edit-navbar.darker .navbar-header .navbar-brand{
+    color: #fff;
+}
+
+
+/*nav item hover*/
 .hvr-underline-from-center {
   display: inline-block;
   vertical-align: middle;
