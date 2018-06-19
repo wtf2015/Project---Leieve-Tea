@@ -19,8 +19,7 @@ body{
 ******************************************************************
 */
 .nav.navbar-nav li a {
-   /*font-weight:bold;*/
-   color: #000;
+   color: #000000;
  }
 
 .hvr-underline-from-center {
@@ -79,14 +78,14 @@ body{
     background-image: linear-gradient(rgba(0, 160, 155, 0.23), rgba(200, 30, 50, 0.23)), url(../img/LT_BG_03.png);
     /*background-color:#f8f8f8;*/
     background-repeat: no-repeat;
-    background-position:center;
+    background-position: center;
     background-size: cover;
     height: 500px;
     margin-bottom: 2%;
     padding: 3em;
     width: 100%;
     text-align:center;
-    position: absolute;
+    /*position: absolute;*/
 }
 
 .page-marque img{
@@ -130,7 +129,7 @@ main{
     margin: 0 auto;
     margin-top: 2em;
     padding:0 0.625em;
-    height:900px;
+    height:1000px;
 }
 
 

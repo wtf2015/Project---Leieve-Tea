@@ -14,7 +14,7 @@
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
     <form runat="server">
