@@ -128,7 +128,7 @@ body{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 500px;
+    height: 30vw;
     margin-bottom: 2%;
     padding: 3em;
     width: 100%;
@@ -140,12 +140,57 @@ body{
     margin-top:1em;
 }
 .page-marque h1{
-    font-size:8vh;
-    color: #fff;
-    margin-bottom:0.4em;
-    text-shadow: 2px 2px 4px #000;
+    position: relative;
+    left:0;
+    right:0;
+    margin:0 auto;
+    font-size: 13vw;
+    color: #3e3e3e;
+    margin-bottom:0.2em;
+    text-shadow: 0px 15px 1px #fff;
+    z-index: 5;
 }
 
+
+/*Wave animation*/
+
+.wave{
+    border-radius: 150px;
+    background: url(../img/svg/wave.svg);
+    background-repeat: repeat-x;
+    background-position-x: 24vw;
+    background-position-y: 2vw;
+    background-size: cover;
+    animation: animate 5s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        background-position: 150px 60px;
+    }
+    25%{
+        background-position: 800px 80px;
+    }
+    50%{
+        background-position: 1000px 100px;
+    }
+    75%{
+        background-position: 1300px 125px;
+    }
+    100%{
+        background-position: 2000px 70px;
+    }
+}
+
+.straw-art{
+    width: 8%;
+    position: absolute;
+    left: 28vw;
+    top: 5em;
+    z-index: 1;
+}
+
+/*Buttons*/
 .banner-button{
     font-family: 'montserrat';
     font-variant: small-caps;

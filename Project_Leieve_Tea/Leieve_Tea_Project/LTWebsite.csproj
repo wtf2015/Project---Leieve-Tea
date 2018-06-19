@@ -224,6 +224,9 @@
     <Content Include="img\nav-logo.png" />
     <Content Include="img\slide2.jpg" />
     <Content Include="img\slideTest.jpg" />
+    <Content Include="img\svg\straw.svg" />
+    <Content Include="img\svg\water.svg" />
+    <Content Include="img\svg\wave.svg" />
     <Content Include="Pages\OrderSys\Order.aspx" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />

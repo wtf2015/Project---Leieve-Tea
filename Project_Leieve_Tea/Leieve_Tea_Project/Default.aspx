@@ -4,12 +4,12 @@
     <link href="css/main.css" rel="stylesheet" />
 
     <header class="page-marque">
-        <div>
+        <%--<div>
             <img src="img/LT_LOGO.png" alt="">
-        </div>
-      
+        </div>--%>      
         <div>
-            <h1>LEIEVE TEA</h1>
+            <h1>L<span class="wave">O</span>VE TEA</h1>
+            <img class="straw-art" src="img/svg/straw.svg" alt="" />
         </div>
 
         <div>
