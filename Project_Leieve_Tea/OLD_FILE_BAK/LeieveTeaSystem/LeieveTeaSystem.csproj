@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AA4A61DA-203E-466B-A85B-1E770E8B26A3}</ProjectGuid>
+    <ProjectGuid>{6E7AF224-0BA9-4091-ABF2-DAD26F1A5E47}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>LeieveTeaSystem</RootNamespace>
@@ -49,7 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LeieveTea.Data\LeieveTea.Data.csproj">
-      <Project>{a20c7bc3-fce0-4fe1-96dd-79a3921bd48d}</Project>
+      <Project>{973345d0-0f38-4189-aed3-4a55d885237c}</Project>
       <Name>LeieveTea.Data</Name>
     </ProjectReference>
   </ItemGroup>

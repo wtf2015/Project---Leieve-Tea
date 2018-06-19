@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{973345D0-0F38-4189-AED3-4A55D885237C}</ProjectGuid>
+    <ProjectGuid>{A20C7BC3-FCE0-4FE1-96DD-79A3921BD48D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>LeieveTea.Data</RootNamespace>

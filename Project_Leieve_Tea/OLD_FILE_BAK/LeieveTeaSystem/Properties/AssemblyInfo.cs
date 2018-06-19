@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("LeieveTea.Data")]
+[assembly: AssemblyTitle("LeieveTeaSystem")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("LeieveTea.Data")]
+[assembly: AssemblyProduct("LeieveTeaSystem")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("a20c7bc3-fce0-4fe1-96dd-79a3921bd48d")]
+[assembly: Guid("6e7af224-0ba9-4091-abf2-dad26f1a5e47")]
 
 // Version information for an assembly consists of the following four values:
 //
