@@ -1,3 +1,4 @@
+# Everytime doing updates, PULL first, Then PUSH!!
 # Project---Leieve-Tea
 Web development for store
 
