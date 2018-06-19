@@ -79,7 +79,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - Powered by MWP Studio</p>
+                <p id="copyright">Copyright &copy; <%: DateTime.Now.Year %> LEIEVE TEA Co., Ltd.</p>
             </footer>
         </div>
     </form>
