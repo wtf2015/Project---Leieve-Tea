@@ -213,7 +213,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="hover.css" />
     <Content Include="img\LT_BG.jpg" />
     <Content Include="img\LT_BG_02.jpg" />
     <Content Include="img\LT_LOGO.png" />
@@ -429,6 +428,16 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Webpages\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LeieveTea.Data\LeieveTea.Data.csproj">
+      <Project>{973345d0-0f38-4189-aed3-4a55d885237c}</Project>
+      <Name>LeieveTea.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LeieveTeaSystem\LeieveTeaSystem.csproj">
+      <Project>{6e7af224-0ba9-4091-abf2-dad26f1a5e47}</Project>
+      <Name>LeieveTeaSystem</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
