@@ -43,7 +43,8 @@
         <div class="navbar navbar-inverse navbar-fixed-top edit-navbar" <%--data-spy="affix" data-offset-top="50"--%>>
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand" <%--style="color:#333; user-select:none; font-weight: bold;"--%>>LEIEVE <span style="font-weight:normal">TEA</span></a>
+                    <a class="navbar-brand nav-logo" runat="server" href="~/"><img class="logo" src="img/nav-logo-black.png" /></a>                 
+                    <a class="navbar-brand">LEIEVE <span style="font-weight:normal">TEA</span></a>                   
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
@@ -131,13 +132,18 @@
         //    }
          //});
 
-         //Jquery darker when scrolling
+         //Jquery darker effect and logo changing when scrolling
+         var initialSrc = "img/nav-logo-black.png";
+         var scrollSrc = "img/nav-logo.png";
+
          $(window).on('scroll', function () {
              if ($(window).scrollTop()) {
                  $('.edit-navbar').addClass('darker');
+                 $(".logo").attr("src", scrollSrc);
              }
              else {
                  $('.edit-navbar').removeClass('darker');
+                 $(".logo").attr("src", initialSrc);
              }
          })
     </script>

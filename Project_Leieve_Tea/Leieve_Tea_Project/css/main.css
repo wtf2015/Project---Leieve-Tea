@@ -42,12 +42,22 @@ body{
     background-color: rgba(0,0,0,0.78);
 }*/
 
+.nav-logo{
+    width: 60px;
+    height: 50px;
+    margin-right:0;
+    transition: all 0.6s ease-out;
+}
+
+.nav-logo img{
+    position: absolute;
+    top: 0;
+}
 
 /*jquery darker when scrolling*/
 .edit-navbar.darker{
     background-color: rgba(0,0,0,0.78);
     height: 50px;
-    transition: all 0.6s ease-out;
 }
 
 .edit-navbar.darker .navbar-collapse.collapse .nav.navbar-nav li a{
@@ -113,7 +123,7 @@ body{
 */
 
 .page-marque{
-    background-image: linear-gradient(rgba(0, 160, 155, 0.23), rgba(200, 30, 50, 0.23)), url(../img/LT_BG_03.png);
+    background-image: /*linear-gradient(rgba(0, 160, 155, 0.23), rgba(200, 30, 50, 0.23)),*/ url(../img/slideTest.jpg);
     /*background-color:#f8f8f8;*/
     background-repeat: no-repeat;
     background-position: center;
@@ -141,8 +151,9 @@ body{
     font-variant: small-caps;
     font-size: 0.8em;
     letter-spacing: .25em;
-    color: #fff;
-    border: 1px #fff solid;
+    color: #3e3e3e;
+    border: 1px #3e3e3e solid;
+    /*border-radius: 2px;*/
     padding: 1rem 2rem;  
     position: relative;
     text-decoration: none;    

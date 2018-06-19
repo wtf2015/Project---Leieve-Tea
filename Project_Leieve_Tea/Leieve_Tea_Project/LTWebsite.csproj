@@ -220,6 +220,10 @@
     <Content Include="img\LT_BG_04.png" />
     <Content Include="img\LT_LOGO.png" />
     <Content Include="img\LT_LOGO_BLACK.png" />
+    <Content Include="img\nav-logo-black.png" />
+    <Content Include="img\nav-logo.png" />
+    <Content Include="img\slide2.jpg" />
+    <Content Include="img\slideTest.jpg" />
     <Content Include="Pages\OrderSys\Order.aspx" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
