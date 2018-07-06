@@ -7,36 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Leieve_Tea_Project {
+namespace Leieve_Tea_Project.BackEndPages {
     
     
-    public partial class SiteMaster {
+    public partial class MenuEdit {
         
         /// <summary>
-        /// MainContent control.
+        /// MenuListView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.WebControls.ListView MenuListView;
         
         /// <summary>
-        /// ChildContent control.
+        /// MenuODS control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ChildContent;
-        
-        /// <summary>
-        /// Menu_BackEnd control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Menu_BackEnd;
+        protected global::System.Web.UI.WebControls.ObjectDataSource MenuODS;
     }
 }
