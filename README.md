@@ -34,7 +34,5 @@ Project Initial Setup (TBD)
 <br>
 to be continued....
 
-<br>
-[Sources]
-<br>
+# Sources
 http://www.java2s.com/Tutorials/HTML_CSS/Bootstrap_Tutorial/index.htm
