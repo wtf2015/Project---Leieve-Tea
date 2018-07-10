@@ -35,4 +35,4 @@ Project Initial Setup (TBD)
 to be continued....
 
 # Sources
-http://www.java2s.com/Tutorials/HTML_CSS/Bootstrap_Tutorial/index.htm
+Bootstrap effects inspiration: http://www.java2s.com/Tutorials/HTML_CSS/Bootstrap_Tutorial/index.htm
