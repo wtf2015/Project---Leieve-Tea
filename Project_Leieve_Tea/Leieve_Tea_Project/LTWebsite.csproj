@@ -203,6 +203,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="css\hover.css" />
     <Content Include="css\main.css" />
+    <Content Include="css\order.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -469,6 +470,10 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\LeieveTea.Data\LeieveTea.Data.csproj">
+      <Project>{a20c7bc3-fce0-4fe1-96dd-79a3921bd48d}</Project>
+      <Name>LeieveTea.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LeieveTeaSystem\LeieveTeaSystem.csproj">
       <Project>{aa4a61da-203e-466b-a85b-1e770e8b26a3}</Project>
       <Name>LeieveTeaSystem</Name>

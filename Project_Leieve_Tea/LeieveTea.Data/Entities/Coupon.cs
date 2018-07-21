@@ -9,23 +9,23 @@ namespace LeieveTea.Data.Entities
     [Table("Coupon")]
     public partial class Coupon
     {
-        [Key]
-        [Column(Order = 0)]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Coupon()
+        {
+            ReceiveOrders = new HashSet<ReceiveOrder>();
+        }
+
         public int CouponID { get; set; }
 
-        [Key]
-        [Column(Order = 1)]
+        [Required]
         [StringLength(50)]
         public string CouponName { get; set; }
 
-        [Key]
-        [Column(Order = 2)]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Discount { get; set; }
 
-        [Key]
-        [Column(Order = 3)]
         public bool Active { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ReceiveOrder> ReceiveOrders { get; set; }
     }
 }

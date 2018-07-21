@@ -1,6 +1,21 @@
+create database LeieveTea
+
+drop table Customer
+drop table Employee
+drop table Schedule
+drop table Coupon
+drop table ReceiveOrder
+drop table ShoppingCart
+drop table Category
+drop table MenuItems
+drop table ShoppingCartItem
+drop table OrderDetails
+drop table PaymentType
+drop table position
+
 create table Customer (
 
-	CustomerID      int      not null
+	CustomerID      int identity(1, 1)    not null
 	Constraint PK_Customer primary key clustered,
 	FirstName       varchar(50)  not null,
 	LastName        varchar (50)  not null,
@@ -20,7 +35,7 @@ create table Customer (
 
 create table Employee (
 
-	EmployeeID          int       not null
+	EmployeeID          int identity(1, 1)      not null
 	Constraint PK_Employee primary key clustered,
 	FirstName       varchar(50)  not null,
 	LastName        varchar (50)  not null,
@@ -30,9 +45,9 @@ create table Employee (
 	Constraint CK_EmployeevalidPhone Check (Phone Like '([0-9][0-9][0-9])[0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]'),
 )
 
-create table  Schedule (
+create table Schedule (
 
-	ScheduleID        Int            not null
+	ScheduleID        Int  identity(1, 1)          not null
 	Constraint PK_Schedule primary key clustered,
 	EmployeeID        int            not null
 	Constraint FK_ScheduleToEmployee references Employee (EmployeeID),
@@ -42,7 +57,7 @@ create table  Schedule (
 
 create table Coupon (
 	
-	CouponID      int     not null
+	CouponID      int identity(1, 1)    not null
 	Constraint PK_Coupon primary key clustered,
 	CouponName     varchar(50)   not null,
 	Discount       int         not null,
@@ -51,7 +66,7 @@ create table Coupon (
 
 create table ReceiveOrder (
 	
-	OrderID           int     not null
+	OrderID           int identity(1, 1)    not null
 	Constraint PK_ReceiveOrder primary key clustered,
 	CustomerID        int       not null
 	Constraint FK_ReceiveorderToCustomer references Customer (CustomerID),
@@ -64,11 +79,11 @@ create table ReceiveOrder (
 	Address       Varchar(100)    not null,
     City          Varchar(50)     not null,
     Province      char(2)         not null
-	 Constraint CK_ValidProvince Check (Province like'[A-Z][A-Z]'),
+	 Constraint CK_Vaprovince Check (Province like'[A-Z][A-Z]'),
 	Email         varchar         not null
 	Constraint	CK_validReceiveOrderEmail check (email like '%@%.%'),
 	PostalCode    char(7)         not null
-	 Constraint CK_PostalCode Check (PostalCode Like '[A-Z][0-9][A-Z] [0-9][A-Z][0-9]'),
+	 Constraint CK_PoCo Check (PostalCode Like '[A-Z][0-9][A-Z] [0-9][A-Z][0-9]'),
 	Phone          Varchar(14)    not null
 	Constraint CK_ReceiveOrdervalidPhone Check (Phone Like '([0-9][0-9][0-9])[0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]'),
 	DeliveryType   varchar(20)    not null,
@@ -80,7 +95,7 @@ create table ReceiveOrder (
 
 Create table ShoppingCart (
 
-		ShoppingCartID     int             not null
+		ShoppingCartID     int identity(1, 1)             not null
 		Constraint PK_ShoppingCart primary key clustered,
 		EmployeeID         int             not null
 		Constraint FK_ShoppingCartToEmployee references Employee (EmployeeID),
@@ -91,14 +106,14 @@ Create table ShoppingCart (
 )
 create table Category (
 
-	CategoryID            int    not null
+	CategoryID       int identity(1, 1)   not null
 	Constraint PK_Category primary key clustered,
 	Description           varchar(50)   not null,
 )
 
-create table   MenuItems (
+create table  MenuItems (
 	
-	MenuItemID     int    not null
+	MenuItemID     int identity(1, 1)   not null
 	Constraint PK_MenuItems primary key clustered,
 	Description    varchar(50)    not null,
 	SellingPrice   money          not null,
@@ -109,7 +124,7 @@ create table   MenuItems (
 
 create table ShoppingCartItem (
 
-	ShoppongCartItemID    int     not null
+	ShoppongCartItemID    int  identity(1, 1)  not null
 	Constraint PK_ShoppingCartItem primary key clustered,
 	ShoppingCartID        int      not null
 	Constraint FK_ShoppingCartItemToShoppingCart references ShoppingCart (ShoppingCartID),
@@ -120,7 +135,7 @@ create table ShoppingCartItem (
 
 create table OrderDetails (
 
-	OrderDetailID         int       not null
+	OrderDetailID         int  identity(1, 1)     not null
 	Constraint PK_OrderDetails primary key clustered,
 	OrderID               int       not null
 	Constraint FK_OrderDetailsToReceiveOrder references ReceiveOrder (OrderID),
@@ -130,9 +145,9 @@ create table OrderDetails (
 	Qty                  int        not null,
 )
 
-create table  PaymentType (
+create table PaymentType (
 
-	PaymentTypeID          int         not null
+	PaymentTypeID          int  identity(1, 1)       not null
 	Constraint PK_PaymentType primary key clustered,
 	Description           varchar(50)      not null,
 )
@@ -140,8 +155,51 @@ create table  PaymentType (
 
 create table position (
 
-	PositionID        Int          not null
+	PositionID        Int   identity(1, 1)       not null
 	Constraint PK_position primary key clustered,
 	Description       varchar(50)   not null,
 	OpenOrNot               bit          not null,
 )
+
+
+insert into Category  (Description)
+values ('MILK TEA SERIES')
+insert into Category  (Description)
+values ('MATCHA SERIES')
+insert into Category  (Description)
+values ('COCOA SERIES')
+insert into Category  (Description)
+values ('CHEESE FOAM SERIES')
+insert into Category  (Description)
+values ('FRESH FRUIT TEA SERIES')
+insert into Category  (Description)
+values ('LEMONADE SERIES')
+insert into Category  (Description)
+values ('SLUSH AND SMOOTHIE')
+
+
+insert into MenuItems(Description,SellingPrice,CategoryID,Active)
+values ('Classic Milk Tea', 4.75,4,1)
+insert into MenuItems(Description,SellingPrice,CategoryID,Active)
+values ('Oreo Milk Tea', 5.25,4,1)
+insert into MenuItems(Description,SellingPrice,CategoryID,Active)
+values ('Cake Milk Tea', 5.25,4,1)
+insert into MenuItems(Description,SellingPrice,CategoryID,Active)
+values ('Milk Tea with Cheese Foam', 5.25,4,1)
+insert into MenuItems(Description,SellingPrice,CategoryID,Active)
+values ('Red Bean Milk Tea', 5.25,4,1)
+
+insert into MenuItems(Description,SellingPrice,CategoryID,Active)
+values ('Taro Milk Tea', 4.75,4,1)
+insert into MenuItems(Description,SellingPrice,CategoryID,Active)
+values ('Coconut Milk Tea', 4.75,4,1)
+insert into MenuItems(Description,SellingPrice,CategoryID,Active)
+values ('Strawberry Milk Tea', 4.75,4,1)
+insert into MenuItems(Description,SellingPrice,CategoryID,Active)
+values ('Honeydew Milk Tea',4.75,4,1)
+insert into MenuItems(Description,SellingPrice,CategoryID,Active)
+values ('Mango Milk Tea', 4.75,4,1)
+
+
+
+

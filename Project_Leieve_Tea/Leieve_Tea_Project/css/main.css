@@ -155,13 +155,14 @@ body{
 /*Wave animation*/
 
 .wave{
+    background-position: 24vw 2vw;
     border-radius: 150px;
-    background: url(../img/svg/wave.svg);
     background-repeat: repeat-x;
-    background-position-x: 24vw;
-    background-position-y: 2vw;
     background-size: cover;
     animation: animate 5s linear infinite;
+    background-color: transparent;
+    background-image: url('../img/svg/wave.svg');
+    background-attachment: scroll;
 }
 
 @keyframes animate{

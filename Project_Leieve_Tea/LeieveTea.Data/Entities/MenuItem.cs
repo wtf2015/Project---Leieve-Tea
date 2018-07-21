@@ -8,27 +8,32 @@ namespace LeieveTea.Data.Entities
 
     public partial class MenuItem
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public MenuItem()
+        {
+            OrderDetails = new HashSet<OrderDetail>();
+            ShoppingCartItems = new HashSet<ShoppingCartItem>();
+        }
         [Key]
-        [Column(Order = 0)]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int MenuItemID { get; set; }
 
-        [Key]
-        [Column(Order = 1)]
+        [Required]
         [StringLength(50)]
         public string Description { get; set; }
 
-        [Key]
-        [Column(Order = 2, TypeName = "money")]
+        [Column(TypeName = "money")]
         public decimal SellingPrice { get; set; }
 
-        [Key]
-        [Column(Order = 3)]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int CategoryID { get; set; }
 
-        [Key]
-        [Column(Order = 4)]
         public bool Active { get; set; }
+
+        public virtual Category Category { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<OrderDetail> OrderDetails { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ShoppingCartItem> ShoppingCartItems { get; set; }
     }
 }

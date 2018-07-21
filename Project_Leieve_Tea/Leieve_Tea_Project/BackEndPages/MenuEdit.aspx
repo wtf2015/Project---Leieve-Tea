@@ -95,11 +95,9 @@
                         </tr>
                         <tr runat="server">
                             <td runat="server" style="text-align: center; background-color: #5D7B9D; font-family: Verdana, Arial, Helvetica, sans-serif; color: #FFFFFF">
-                                <asp:DataPager runat="server" ID="DataPager1">
+                                <asp:DataPager runat="server" ID="DataPager2">
                                     <Fields>
-                                        <asp:NextPreviousPagerField ButtonType="Button" ShowFirstPageButton="True" ShowNextPageButton="False" ShowPreviousPageButton="False"></asp:NextPreviousPagerField>
-                                        <asp:NumericPagerField></asp:NumericPagerField>
-                                        <asp:NextPreviousPagerField ButtonType="Button" ShowLastPageButton="True" ShowNextPageButton="False" ShowPreviousPageButton="False"></asp:NextPreviousPagerField>
+                                        <asp:NextPreviousPagerField ButtonType="Button" ShowFirstPageButton="True" ShowLastPageButton="True"></asp:NextPreviousPagerField>
                                     </Fields>
                                 </asp:DataPager>
                             </td>
@@ -121,7 +119,6 @@
                             <asp:CheckBox Checked='<%# Eval("Active") %>' runat="server" ID="ActiveCheckBox" Enabled="false" /></td>
                     </tr>
                 </SelectedItemTemplate>
-                <ItemTemplate></ItemTemplate>
             </asp:ListView>
             <asp:ObjectDataSource runat="server" ID="MenuODS" DataObjectTypeName="LeieveTea.Data.Entities.MenuItem" InsertMethod="Add_MenuItem" OldValuesParameterFormatString="original_{0}" SelectMethod="MenuItems_List" TypeName="LeieveTeaSystem.BLL.MenuController"></asp:ObjectDataSource>
         </div>

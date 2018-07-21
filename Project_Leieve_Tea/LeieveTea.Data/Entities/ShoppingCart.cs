@@ -9,27 +9,27 @@ namespace LeieveTea.Data.Entities
     [Table("ShoppingCart")]
     public partial class ShoppingCart
     {
-        [Key]
-        [Column(Order = 0)]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public ShoppingCart()
+        {
+            ShoppingCartItems = new HashSet<ShoppingCartItem>();
+        }
+
         public int ShoppingCartID { get; set; }
 
-        [Key]
-        [Column(Order = 1)]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int EmployeeID { get; set; }
 
-        [Key]
-        [Column(Order = 2)]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int CustomerID { get; set; }
 
-        [Key]
-        [Column(Order = 3)]
         public DateTime CreatedOn { get; set; }
 
-        [Key]
-        [Column(Order = 4)]
         public DateTime UpdatedOn { get; set; }
+
+        public virtual Customer Customer { get; set; }
+
+        public virtual Employee Employee { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ShoppingCartItem> ShoppingCartItems { get; set; }
     }
 }
