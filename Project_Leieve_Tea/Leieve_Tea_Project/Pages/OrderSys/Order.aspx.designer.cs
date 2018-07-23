@@ -22,6 +22,60 @@ namespace Leieve_Tea_Project.Pages.OrderSys {
         protected global::System.Web.UI.WebControls.Repeater CategoryRepeater;
         
         /// <summary>
+        /// SuntotalLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label SuntotalLabel;
+        
+        /// <summary>
+        /// SubtotalTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox SubtotalTextBox;
+        
+        /// <summary>
+        /// GSTLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label GSTLabel;
+        
+        /// <summary>
+        /// GSTTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox GSTTextBox;
+        
+        /// <summary>
+        /// TotalLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label TotalLabel;
+        
+        /// <summary>
+        /// TotalTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TotalTextBox;
+        
+        /// <summary>
         /// MenuODS control.
         /// </summary>
         /// <remarks>
