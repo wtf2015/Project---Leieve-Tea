@@ -22,6 +22,15 @@ namespace Leieve_Tea_Project.Pages.OrderSys {
         protected global::System.Web.UI.WebControls.Repeater CategoryRepeater;
         
         /// <summary>
+        /// pllaceOrderButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button pllaceOrderButton;
+        
+        /// <summary>
         /// SuntotalLabel control.
         /// </summary>
         /// <remarks>
@@ -56,6 +65,24 @@ namespace Leieve_Tea_Project.Pages.OrderSys {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox GSTTextBox;
+        
+        /// <summary>
+        /// PSTLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label PSTLabel;
+        
+        /// <summary>
+        /// PSTTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox PSTTextBox;
         
         /// <summary>
         /// TotalLabel control.

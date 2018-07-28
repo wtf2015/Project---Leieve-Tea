@@ -13,8 +13,11 @@
 
            
     </header> 
+    <div>
+        
+    </div>
 
-   
+   <div>
     <asp:Repeater ID="CategoryRepeater" runat="server" 
         ItemType="LeieveTea.Data.DTOs.CategoryDTO" DataSourceID="MenuODS">
         <ItemTemplate >
@@ -46,17 +49,28 @@
             
         </ItemTemplate>
     </asp:Repeater>
+</div>
+    <div>
+       
+        <asp:Button ID="pllaceOrderButton" runat="server" Text="Confirm" />
+        
+    </div>
+
     <br />
     <br />
     <div style="margin-left:100px">
         <asp:Label ID="SuntotalLabel" runat="server" Text="Subtotal">Subtotal: </asp:Label>
         <asp:TextBox ID="SubtotalTextBox" runat="server"></asp:TextBox>
     </div>
-    <div>
-        <asp:Label ID="GSTLabel" runat="server" Text="Subtotal">GST: </asp:Label>
+    <div style="margin-left:100px">
+        <asp:Label ID="GSTLabel" runat="server" Text="GST">GST: </asp:Label>
          <asp:TextBox ID="GSTTextBox" runat="server"></asp:TextBox>
      </div>
-    <div>
+    <div style="margin-left:100px">
+        <asp:Label ID="PSTLabel" runat="server" Text="PST">PST: </asp:Label>
+         <asp:TextBox ID="PSTTextBox" runat="server"></asp:TextBox>
+     </div>
+    <div style="margin-left:100px">
         <asp:Label ID="TotalLabel" runat="server" Text="Subtotal">Total: </asp:Label>
          <asp:TextBox ID="TotalTextBox" runat="server"></asp:TextBox>
     </div>
