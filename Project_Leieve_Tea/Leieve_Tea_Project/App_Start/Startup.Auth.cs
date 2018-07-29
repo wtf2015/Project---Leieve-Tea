@@ -8,6 +8,9 @@ using Microsoft.Owin.Security.DataProtection;
 using Microsoft.Owin.Security.Google;
 using Owin;
 using Leieve_Tea_Project.Models;
+using AppSecurity.BLL;
+using AppSecurity.DAL;
+using AppSecurity.Entities;
 
 namespace Leieve_Tea_Project
 {

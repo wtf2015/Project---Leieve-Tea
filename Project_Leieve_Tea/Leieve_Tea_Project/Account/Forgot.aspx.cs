@@ -5,6 +5,8 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Owin;
 using Leieve_Tea_Project.Models;
+using AppSecurity.BLL;
+using AppSecurity.Entities;
 
 namespace Leieve_Tea_Project.Account
 {
