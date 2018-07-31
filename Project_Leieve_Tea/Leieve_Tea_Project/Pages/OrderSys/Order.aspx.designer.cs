@@ -58,6 +58,24 @@ namespace Leieve_Tea_Project.Pages.OrderSys {
         protected global::System.Web.UI.WebControls.TextBox GSTTextBox;
         
         /// <summary>
+        /// PSTLabel1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label PSTLabel1;
+        
+        /// <summary>
+        /// PSTTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox PSTTextBox;
+        
+        /// <summary>
         /// TotalLabel control.
         /// </summary>
         /// <remarks>

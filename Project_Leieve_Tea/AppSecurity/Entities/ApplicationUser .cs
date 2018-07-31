@@ -15,7 +15,8 @@ namespace AppSecurity.Entities
 
         public int? EmployeeID { get; set; }
 
-        public int? CustomerID { get; set; }
+        public int? CustomerID { get; set; }
+
 
         public ClaimsIdentity GenerateUserIdentity(ApplicationUserManager manager)
         {

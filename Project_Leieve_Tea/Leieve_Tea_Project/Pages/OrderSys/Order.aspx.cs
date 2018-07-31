@@ -12,6 +12,7 @@ namespace Leieve_Tea_Project.Pages.OrderSys
     {
         public static double subtotal;
         public static double gst;
+        public static double pst;
         public static double total;
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -40,6 +41,9 @@ namespace Leieve_Tea_Project.Pages.OrderSys
 
             gst = subtotal* 0.05;
             GSTTextBox.Text = gst.ToString("#.##");
+
+            pst = subtotal * 0.07;
+            GSTTextBox.Text = pst.ToString("#.##");
 
             total = subtotal + gst;
             TotalTextBox.Text = total.ToString("#.##");

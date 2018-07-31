@@ -54,8 +54,12 @@
         <asp:TextBox ID="SubtotalTextBox" runat="server"></asp:TextBox>
     </div>
     <div>
-        <asp:Label ID="GSTLabel" runat="server" Text="Subtotal">GST: </asp:Label>
+        <asp:Label ID="GSTLabel" runat="server" Text="GST">GST: </asp:Label>
          <asp:TextBox ID="GSTTextBox" runat="server"></asp:TextBox>
+     </div>
+     <div>
+        <asp:Label ID="PSTLabel1" runat="server" Text="PST">PST: </asp:Label>
+         <asp:TextBox ID="PSTTextBox" runat="server"></asp:TextBox>
      </div>
     <div>
         <asp:Label ID="TotalLabel" runat="server" Text="Subtotal">Total: </asp:Label>

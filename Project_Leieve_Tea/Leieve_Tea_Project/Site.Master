@@ -48,11 +48,27 @@
                     <a class="navbar-brand">LEIEVE <span style="font-weight: normal">TEA</span></a>
                 </div>
                 <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
+                    <%--<ul class="nav navbar-nav">
                         <li><a class="hvr-underline-from-center" runat="server" href="~/">Home</a></li>
                         <li><a class="hvr-underline-from-center" runat="server" href="~/About">About</a></li>
                         <li><a class="hvr-underline-from-center" runat="server" href="~/Contact">Contact</a></li>
-                    </ul>
+                    </ul>--%>
+                     <asp:Menu ID="SiteNav" runat="server"
+                         DataSourceID="SiteNavDataSource" Orientation="Horizontal"
+                         StaticDisplayLevels="1" StaticMenuStyle-CssClass="nav navbar-nav"
+                         StaticSelectedStyle-CssClass="active"
+                         DynamicMenuStyle-CssClass="dropdown-menu" 
+                         IncludeStyleBlock="false" EnableTheming="false" 
+                         EnableViewState="false"></asp:Menu>
+
+                    <script>
+                        $(function () {
+                            $('#SiteNav').next().removeAttr('style');
+                        });
+                    </script>
+
+                    <asp:SiteMapDataSource ID="SiteNavDataSource" runat="server"
+                         ShowStartingNode="false" />
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
                             <ul class="nav navbar-nav navbar-right">
