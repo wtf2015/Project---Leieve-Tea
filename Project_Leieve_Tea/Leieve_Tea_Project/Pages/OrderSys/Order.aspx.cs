@@ -11,25 +11,12 @@ namespace Leieve_Tea_Project.Pages.OrderSys
     public partial class Order : System.Web.UI.Page
     {
         public static double subtotal;
-        public static double gst;
-        public static double pst;
-        public static double total;
         protected void Page_Load(object sender, EventArgs e)
         {
 
             if (!IsPostBack)
             {
-                if (!Request.IsAuthenticated)
-                {
-                    Response.Redirect("~/Account/Login.aspx");
-                }
-                else
-                {
-                    if (!User.IsInRole(SecurityRoles.WebsiteAdmins))
-                    {
-                        Response.Redirect("~/Account/Login.aspx");
-                    }
-                }
+                
             }
         }
 
@@ -39,14 +26,14 @@ namespace Leieve_Tea_Project.Pages.OrderSys
             subtotal += double.Parse(sub[1]);
             SubtotalTextBox.Text =  subtotal.ToString();
 
-            gst = subtotal* 0.05;
-            GSTTextBox.Text = gst.ToString("#.##");
+            double gst = subtotal* 0.05;
+            GSTTextBox.Text = gst.ToString("0.##");
 
-            pst = subtotal * 0.07;
-            GSTTextBox.Text = pst.ToString("#.##");
+            double pst = subtotal * 0.07;
+            GSTTextBox.Text = pst.ToString("0.##");
 
-            total = subtotal + gst;
-            TotalTextBox.Text = total.ToString("#.##");
+            double total = subtotal + gst;
+            TotalTextBox.Text = total.ToString("0.##");
         }
 
     }
