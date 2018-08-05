@@ -9,14 +9,22 @@ namespace LeieveTea.Data.Entities
     [Table("Schedule")]
     public partial class Schedule
     {
+        [Key]
+        [Column(Order = 0)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ScheduleID { get; set; }
 
+        [Key]
+        [Column(Order = 1)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int EmployeeID { get; set; }
 
+        [Key]
+        [Column(Order = 2)]
         public DateTime StartTime { get; set; }
 
+        [Key]
+        [Column(Order = 3)]
         public DateTime EndTime { get; set; }
-
-        public virtual Employee Employee { get; set; }
     }
 }

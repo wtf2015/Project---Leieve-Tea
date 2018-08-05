@@ -9,9 +9,13 @@ namespace LeieveTea.Data.Entities
     [Table("PaymentType")]
     public partial class PaymentType
     {
+        [Key]
+        [Column(Order = 0)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int PaymentTypeID { get; set; }
 
-        [Required]
+        [Key]
+        [Column(Order = 1)]
         [StringLength(50)]
         public string Description { get; set; }
     }

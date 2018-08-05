@@ -9,53 +9,54 @@ namespace LeieveTea.Data.Entities
     [Table("Customer")]
     public partial class Customer
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Customer()
-        {
-            ReceiveOrders = new HashSet<ReceiveOrder>();
-            ShoppingCarts = new HashSet<ShoppingCart>();
-        }
-
+        [Key]
+        [Column(Order = 0)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int CustomerID { get; set; }
 
-        [Required]
+        [Key]
+        [Column(Order = 1)]
         [StringLength(50)]
         public string FirstName { get; set; }
 
-        [Required]
+        [Key]
+        [Column(Order = 2)]
         [StringLength(50)]
         public string LastName { get; set; }
 
-        [Required]
+        [Key]
+        [Column(Order = 3)]
         [StringLength(100)]
         public string Address { get; set; }
 
-        [Required]
+        [Key]
+        [Column(Order = 4)]
         [StringLength(50)]
         public string City { get; set; }
 
-        [Required]
+        [Key]
+        [Column(Order = 5)]
         [StringLength(2)]
         public string Province { get; set; }
 
-        [Required]
+        [Key]
+        [Column(Order = 6)]
         [StringLength(1)]
         public string Email { get; set; }
 
-        [Required]
+        [Key]
+        [Column(Order = 7)]
         [StringLength(7)]
         public string PostalCode { get; set; }
 
-        [Required]
+        [Key]
+        [Column(Order = 8)]
         [StringLength(14)]
         public string Phone { get; set; }
 
+        [Key]
+        [Column(Order = 9)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Points { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ReceiveOrder> ReceiveOrders { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ShoppingCart> ShoppingCarts { get; set; }
     }
 }

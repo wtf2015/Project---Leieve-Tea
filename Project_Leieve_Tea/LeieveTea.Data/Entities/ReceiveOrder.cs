@@ -9,71 +9,80 @@ namespace LeieveTea.Data.Entities
     [Table("ReceiveOrder")]
     public partial class ReceiveOrder
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public ReceiveOrder()
-        {
-            OrderDetails = new HashSet<OrderDetail>();
-        }
-
         [Key]
-        public int OrderID { get; set; }
-
-        public int CustomerID { get; set; }
-
-        public int EmployeeID { get; set; }
-
-        public int CouponID { get; set; }
-
-        [Required]
+        [Column(Order = 0)]
         [StringLength(50)]
         public string FirstName { get; set; }
 
+        [Key]
+        [Column(Order = 1)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int OrderID { get; set; }
+
+        [Key]
+        [Column(Order = 2)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int CustomerID { get; set; }
+
+        [Key]
+        [Column(Order = 3)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int EmployeeID { get; set; }
+
+        [Key]
+        [Column(Order = 4)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int CouponID { get; set; }
+
+        [Key]
+        [Column(Order = 5)]
         public DateTime OrderDate { get; set; }
 
-        [Required]
+        [Key]
+        [Column(Order = 6)]
         [StringLength(100)]
         public string Address { get; set; }
 
-        [Required]
+        [Key]
+        [Column(Order = 7)]
         [StringLength(50)]
         public string City { get; set; }
 
-        [Required]
+        [Key]
+        [Column(Order = 8)]
         [StringLength(2)]
         public string Province { get; set; }
 
-        [Required]
+        [Key]
+        [Column(Order = 9)]
         [StringLength(1)]
         public string Email { get; set; }
 
-        [Required]
+        [Key]
+        [Column(Order = 10)]
         [StringLength(7)]
         public string PostalCode { get; set; }
 
-        [Required]
+        [Key]
+        [Column(Order = 11)]
         [StringLength(14)]
         public string Phone { get; set; }
 
-        [Required]
+        [Key]
+        [Column(Order = 12)]
         [StringLength(20)]
         public string DeliveryType { get; set; }
 
-        [Column(TypeName = "money")]
+        [Key]
+        [Column(Order = 13, TypeName = "money")]
         public decimal GST { get; set; }
 
-        [Column(TypeName = "money")]
+        [Key]
+        [Column(Order = 14, TypeName = "money")]
         public decimal DeliveryFee { get; set; }
 
-        [Column(TypeName = "money")]
+        [Key]
+        [Column(Order = 15, TypeName = "money")]
         public decimal PaymentType { get; set; }
-
-        public virtual Coupon Coupon { get; set; }
-
-        public virtual Customer Customer { get; set; }
-
-        public virtual Employee Employee { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<OrderDetail> OrderDetails { get; set; }
     }
 }

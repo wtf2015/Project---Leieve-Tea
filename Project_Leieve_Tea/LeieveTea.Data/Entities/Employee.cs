@@ -9,39 +9,32 @@ namespace LeieveTea.Data.Entities
     [Table("Employee")]
     public partial class Employee
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Employee()
-        {
-            ReceiveOrders = new HashSet<ReceiveOrder>();
-            Schedules = new HashSet<Schedule>();
-            ShoppingCarts = new HashSet<ShoppingCart>();
-        }
-
+        [Key]
+        [Column(Order = 0)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int EmployeeID { get; set; }
 
-        [Required]
+        [Key]
+        [Column(Order = 1)]
         [StringLength(50)]
         public string FirstName { get; set; }
 
-        [Required]
+        [Key]
+        [Column(Order = 2)]
         [StringLength(50)]
         public string LastName { get; set; }
 
+        [Key]
+        [Column(Order = 3)]
         public DateTime DateHired { get; set; }
 
+        [Key]
+        [Column(Order = 4)]
         public DateTime DateReleased { get; set; }
 
-        [Required]
+        [Key]
+        [Column(Order = 5)]
         [StringLength(14)]
         public string Phone { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ReceiveOrder> ReceiveOrders { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Schedule> Schedules { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ShoppingCart> ShoppingCarts { get; set; }
     }
 }

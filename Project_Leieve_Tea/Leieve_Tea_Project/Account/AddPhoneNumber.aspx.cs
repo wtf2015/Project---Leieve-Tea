@@ -8,7 +8,6 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using System.Threading.Tasks;
 using Leieve_Tea_Project.Models;
-using AppSecurity.BLL;
 
 namespace Leieve_Tea_Project.Account
 {

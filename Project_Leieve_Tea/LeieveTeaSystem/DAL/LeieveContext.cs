@@ -1,12 +1,11 @@
-
+namespace LeieveTeaSystem.DAL
+{
     using System;
     using System.Data.Entity;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
-using LeieveTea.Data.Entities;
+    using LeieveTea.Data.Entities;
 
-namespace LeieveTeaSystem.DAL
-{
     public partial class LeieveContext : DbContext
     {
         public LeieveContext()
@@ -33,19 +32,9 @@ namespace LeieveTeaSystem.DAL
                 .Property(e => e.Description)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Category>()
-                .HasMany(e => e.MenuItems)
-                .WithRequired(e => e.Category)
-                .WillCascadeOnDelete(false);
-
             modelBuilder.Entity<Coupon>()
                 .Property(e => e.CouponName)
                 .IsUnicode(false);
-
-            modelBuilder.Entity<Coupon>()
-                .HasMany(e => e.ReceiveOrders)
-                .WithRequired(e => e.Coupon)
-                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Customer>()
                 .Property(e => e.FirstName)
@@ -81,16 +70,6 @@ namespace LeieveTeaSystem.DAL
                 .Property(e => e.Phone)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Customer>()
-                .HasMany(e => e.ReceiveOrders)
-                .WithRequired(e => e.Customer)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<Customer>()
-                .HasMany(e => e.ShoppingCarts)
-                .WithRequired(e => e.Customer)
-                .WillCascadeOnDelete(false);
-
             modelBuilder.Entity<Employee>()
                 .Property(e => e.FirstName)
                 .IsUnicode(false);
@@ -103,21 +82,6 @@ namespace LeieveTeaSystem.DAL
                 .Property(e => e.Phone)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Employee>()
-                .HasMany(e => e.ReceiveOrders)
-                .WithRequired(e => e.Employee)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<Employee>()
-                .HasMany(e => e.Schedules)
-                .WithRequired(e => e.Employee)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<Employee>()
-                .HasMany(e => e.ShoppingCarts)
-                .WithRequired(e => e.Employee)
-                .WillCascadeOnDelete(false);
-
             modelBuilder.Entity<MenuItem>()
                 .Property(e => e.Description)
                 .IsUnicode(false);
@@ -125,16 +89,6 @@ namespace LeieveTeaSystem.DAL
             modelBuilder.Entity<MenuItem>()
                 .Property(e => e.SellingPrice)
                 .HasPrecision(19, 4);
-
-            modelBuilder.Entity<MenuItem>()
-                .HasMany(e => e.OrderDetails)
-                .WithRequired(e => e.MenuItem)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<MenuItem>()
-                .HasMany(e => e.ShoppingCartItems)
-                .WithRequired(e => e.MenuItem)
-                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<OrderDetail>()
                 .Property(e => e.SellingPrice)
@@ -193,16 +147,6 @@ namespace LeieveTeaSystem.DAL
             modelBuilder.Entity<ReceiveOrder>()
                 .Property(e => e.PaymentType)
                 .HasPrecision(19, 4);
-
-            modelBuilder.Entity<ReceiveOrder>()
-                .HasMany(e => e.OrderDetails)
-                .WithRequired(e => e.ReceiveOrder)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<ShoppingCart>()
-                .HasMany(e => e.ShoppingCartItems)
-                .WithRequired(e => e.ShoppingCart)
-                .WillCascadeOnDelete(false);
         }
     }
 }

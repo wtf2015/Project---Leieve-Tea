@@ -60,19 +60,4 @@
         </div>
     </form>
 </body>
-    <script type="text/javascript">
-    var initialSrc = "img/nav-logo-black.png";
-    var scrollSrc = "img/nav-logo.png";
-
-    $(window).on('scroll', function () {
-        if ($(window).scrollTop()) {
-            $('.edit-navbar').addClass('darker');
-            $(".logo").attr("src", scrollSrc);
-        }
-        else {
-            $('.edit-navbar').removeClass('darker');
-            $(".logo").attr("src", initialSrc);
-        }
-    })
-</script>
 </html>
