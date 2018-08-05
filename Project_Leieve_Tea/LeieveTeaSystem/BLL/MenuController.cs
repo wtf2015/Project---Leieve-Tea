@@ -1,4 +1,5 @@
-﻿using LeieveTea.Data.Entities;
+﻿using LeieveTea.Data.DTOs;
+using LeieveTea.Data.Entities;
 using LeieveTeaSystem.DAL;
 using System;
 using System.Collections.Generic;
@@ -18,7 +19,8 @@ namespace LeieveTeaSystem.BLL
         {
             using (var context = new LeieveContext())
             {
-                return context.MenuItems.ToList();
+                var res = context.MenuItems;
+                return res.ToList();
             }
         }
 
@@ -32,6 +34,57 @@ namespace LeieveTeaSystem.BLL
             }
         }
 
+        [DataObjectMethod(DataObjectMethodType.Delete, false)]
+        public void Delete_MenuItem(MenuItem item)
+        {
+            using (var context = new LeieveContext())
+            {
+                var existing = context.MenuItems.Find(item.MenuItemID);
+
+
+                context.MenuItems.Remove(existing);
+                context.SaveChanges();
+            }
+        }
+
+        [DataObjectMethod(DataObjectMethodType.Update, false)]
+        public void Update_MenuItem(MenuItem item)
+        {
+            using (var context = new LeieveContext())
+            {
+
+
+
+                context.Entry(item).State = System.Data.Entity.EntityState.Modified;
+                 context.SaveChanges();
+            }
+        }
+
+
+
+        #endregion
+        #region Place Order
+        [DataObjectMethod(DataObjectMethodType.Select, false)]
+        public List<CategoryDTO> MenuByCategory_list()
+        {
+            using(var context = new LeieveContext())
+            {
+                var resualt = from x in context.Categories
+                              orderby x.Description
+                              select new CategoryDTO
+                              {
+                                  Description = x.Description,
+                                  MenuItems = from y in x.MenuItems
+                                              orderby y.Description
+                                              select new MenuItemPOCO
+                                              {
+                                                  ItemDescription = y.Description,
+                                                  Price = y.SellingPrice
+                                              }
+                              };
+                return resualt.ToList();
+            }
+        }
         #endregion
     }
 }

@@ -13,7 +13,7 @@
         </div>
 
         <div>
-            <a class="banner-button" href="#">ORDER NOW</a>
+            <a class="banner-button" runat="server" href="~/Pages/OrderSys/Order.aspx">ORDER NOW</a>
         </div>    
     </header> 
     
