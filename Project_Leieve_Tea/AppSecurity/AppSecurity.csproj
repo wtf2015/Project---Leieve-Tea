@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A20C7BC3-FCE0-4FE1-96DD-79A3921BD48D}</ProjectGuid>
+    <ProjectGuid>{291B2813-3B20-4A72-977D-4ECD4A1DCCB1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LeieveTea.Data</RootNamespace>
-    <AssemblyName>LeieveTea.Data</AssemblyName>
+    <RootNamespace>AppSecurity</RootNamespace>
+    <AssemblyName>AppSecurity</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,18 +30,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data.Entity" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,27 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DTOs\CategoryDTO.cs" />
-    <Compile Include="Entities\Category.cs" />
-    <Compile Include="Entities\Coupon.cs" />
-    <Compile Include="Entities\Customer.cs" />
-    <Compile Include="Entities\Employee.cs" />
-    <Compile Include="Entities\MenuItem.cs" />
-    <Compile Include="Entities\OrderDetail.cs" />
-    <Compile Include="Entities\PaymentType.cs" />
-    <Compile Include="Entities\position.cs" />
-    <Compile Include="Entities\ReceiveOrder.cs" />
-    <Compile Include="Entities\Schedule.cs" />
-    <Compile Include="Entities\ShoppingCart.cs" />
-    <Compile Include="Entities\ShoppingCartItem.cs" />
-    <Compile Include="POCOs\MenuItemPOCO.cs" />
-    <Compile Include="POCOs\ShoppingCartItemPOCO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
+    <Folder Include="BLL\" />
+    <Folder Include="DAL\" />
+    <Folder Include="Entities\" />
+    <Folder Include="POCO\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

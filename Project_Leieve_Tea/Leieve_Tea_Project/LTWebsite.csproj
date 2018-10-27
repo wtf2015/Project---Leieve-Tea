@@ -212,6 +212,8 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Properties\PublishProfiles\LeieveTea - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\LTWebsite20180807051423 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="img\footer_logo.png" />
     <Content Include="img\LT_BG.jpg" />

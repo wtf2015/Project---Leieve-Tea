@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\MenuController.cs" />
+    <Compile Include="BLL\PlaceOrderController.cs" />
     <Compile Include="DAL\LeieveContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

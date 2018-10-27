@@ -78,6 +78,7 @@ namespace LeieveTeaSystem.BLL
                                               orderby y.Description
                                               select new MenuItemPOCO
                                               {
+                                                  Itemid = y.MenuItemID,
                                                   ItemDescription = y.Description,
                                                   Price = y.SellingPrice
                                               }
